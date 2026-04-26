@@ -1,19 +1,30 @@
-import { MaterialIcons } from "@expo/vector-icons"
-import { Tabs } from "expo-router"
+// import { MaterialIcons } from "@expo/vector-icons"
+// import { Tabs } from "expo-router"
+
+// export default function Layout() {
+//     return (
+//         // <Stack screenOptions={{ headerShown: false }}/>
+//         <Tabs screenOptions={{ headerShown: false }} >
+//             <Tabs.Screen name="index"  options={{
+//                 tabBarLabel: "Home",
+//                 tabBarIcon: ({color}) => <MaterialIcons name="home" size={24} color={color} />
+//                 // {color}: pega a cor padrão do tema, e adiciona no icone (se estiver ou não selecionado)
+//             }}/>
+//             <Tabs.Screen name="signup"  options={{
+//                 tabBarLabel: "Sign Up",
+//                 tabBarIcon: ({color}) => <MaterialIcons name="person-add" size={24} color={color} />
+//             }} />
+//         </Tabs>
+//     )
+// }
+
+import { Drawer } from "expo-router/drawer";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function Layout() {
     return (
-        // <Stack screenOptions={{ headerShown: false }}/>
-        <Tabs screenOptions={{ headerShown: false }} >
-            <Tabs.Screen name="index"  options={{
-                tabBarLabel: "Home",
-                tabBarIcon: ({color}) => <MaterialIcons name="home" size={24} color={color} />
-                // {color}: pega a cor padrão do tema, e adiciona no icone (se estiver ou não selecionado)
-            }}/>
-            <Tabs.Screen name="signup"  options={{
-                tabBarLabel: "Sign Up",
-                tabBarIcon: ({color}) => <MaterialIcons name="person-add" size={24} color={color} />
-            }} />
-        </Tabs>
-    )
+        <GestureHandlerRootView style={{ flex: 1 }}>
+            <Drawer />
+        </GestureHandlerRootView>
+    );
 }
