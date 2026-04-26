@@ -18,13 +18,26 @@
 //     )
 // }
 
-import { Drawer } from "expo-router/drawer";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { Stack } from "expo-router";
 
 export default function Layout() {
     return (
-        <GestureHandlerRootView style={{ flex: 1 }}>
-            <Drawer />
-        </GestureHandlerRootView>
+        // <GestureHandlerRootView style={{ flex: 1 }}>
+        //     <Drawer screenOptions={{headerShown: false}}>
+        //         <Drawer.Screen name="index" 
+        //         options={{
+        //             drawerLabel: "Home",
+        //             drawerIcon: ({color}) => <MaterialIcons name="home" size={24} color={color} />
+
+        //         }} />
+        //         <Drawer.Screen name="signup"
+        //             options={{
+        //                 drawerLabel: "Criar conta",
+        //                 drawerIcon: ({ color }) => <MaterialIcons name="person" size={24} color={color} />
+
+        //             }} />
+        //     </Drawer>
+        // </GestureHandlerRootView>
+        <Stack />
     );
 }
