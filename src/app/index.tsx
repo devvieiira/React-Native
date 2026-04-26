@@ -5,11 +5,18 @@ export default function Index() {
     const signUp = () => {
         router.navigate("/signup")
     }
+
+    const signIn = () => {
+        router.navigate("/(drawer)")
+    }
     return (
         <View style={styles.container}>
                 <TouchableOpacity style={styles.button} onPress={signUp}>
                     <Text style={styles.label}>Criar conta</Text>
                 </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={signIn}>
+                <Text style={styles.label}>Entrar</Text>
+            </TouchableOpacity>
 
         </View>
     )

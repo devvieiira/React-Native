@@ -38,6 +38,6 @@ export default function Layout() {
         //             }} />
         //     </Drawer>
         // </GestureHandlerRootView>
-        <Stack />
+        <Stack screenOptions={{ headerShown: false }} />
     );
 }
